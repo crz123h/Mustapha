@@ -1,0 +1,69 @@
+/* تصميم الخلفيات */
+.neon-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+    z-index: -1;
+    animation: backgroundGlow 5s infinite alternate;
+}
+
+@keyframes backgroundGlow {
+    from {
+        background: radial-gradient(circle, #00d4ff 20%, rgba(0, 0, 0, 0.8) 80%);
+    }
+    to {
+        background: radial-gradient(circle, #d400ff 20%, rgba(0, 0, 0, 0.8) 80%);
+    }
+}
+
+/* النصوص المتوهجة */
+.neon-text {
+    font-size: 3rem;
+    color: #39ff14;
+    text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 40px #39ff14;
+    animation: textFlicker 2s infinite;
+}
+
+@keyframes textFlicker {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* تنسيق الرأس */
+.header {
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-links a {
+    color: #00d4ff;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #d400ff;
+    text-shadow: 0 0 10px #d400ff, 0 0 20px #d400ff;
+}
+
+/* قسم الألعاب */
+.games .game-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
